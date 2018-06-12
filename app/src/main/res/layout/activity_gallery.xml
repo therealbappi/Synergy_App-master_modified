@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Gallery"
+    android:background="@drawable/backgrounddark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:orientation="vertical"
+        android:id="@+id/l1"
+        >
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/slidedots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l1"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        android:background="@drawable/indicatorbackground">
+        <com.ugurtekbas.fadingindicatorlibrary.FadingIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            app:radius="5dp"
+            app:fillColor="#56B6BF"
+            app:strokeColor="#FC823B"
+            app:shape="Rectangle"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/slidedots"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp">
+        <Button
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height ="wrap_content"
+            android:height="40dp"
+            android:width="60dp"
+            android:text="BACK TO HOME"
+            android:textSize="20sp"
+            android:textColor="@android:color/background_light"
+            android:background="@drawable/roundedbutton"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

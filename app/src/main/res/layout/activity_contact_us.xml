@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactUs"
+    android:background="@drawable/backgrounddark"
+    >
+    <LinearLayout
+        android:id="@+id/images"
+        android:layout_width="match_parent"
+        android:layout_height="177dp"
+        android:background="@drawable/backgrounddark"
+    android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="147dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/slidedots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewpager"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+            <com.ugurtekbas.fadingindicatorlibrary.FadingIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                app:radius="5dp"
+                app:fillColor="#56B6BF"
+                app:strokeColor="#FC823B"
+                app:shape="Rectangle"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/images">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/images"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:id="@+id/ll1"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CALL US AT:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/background_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.052"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.197" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/ll1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OUR SOCIAL MEDIA HANDLES:"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.052"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.197" />
+
+            <br.com.bloder.magic.view.MagicButton
+                android:id="@+id/insta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/facebook"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="10dp"
+                app:button_icon="@drawable/insta"
+                app:button_icon_height="30dp"
+                app:button_icon_width="30dp"
+                app:expandable_area_color="#bc2a8d"
+                app:hide_text="Instagram"
+                app:hide_text_color="#ffffff"
+                app:hide_text_size="6sp"
+                app:icon_button_color="#003366"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:magic_button_size="50dp" />
+
+            <br.com.bloder.magic.view.MagicButton
+                android:id="@+id/facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="15dp"
+                app:button_icon="@drawable/facebook"
+                app:button_icon_height="30dp"
+                app:button_icon_width="30dp"
+                app:expandable_area_color="#3b5998"
+                app:hide_text="ieteisf"
+                app:hide_text_color="#ffffff"
+                app:hide_text_size="6sp"
+                app:icon_button_color="#003366"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:magic_button_size="50dp" />
+            <br.com.bloder.magic.view.MagicButton
+                android:id="@+id/gmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/facebook"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="10dp"
+                app:button_icon="@drawable/email"
+                app:button_icon_height="30dp"
+                app:button_icon_width="30dp"
+                app:expandable_area_color="#ffffff"
+                app:hide_text="Gmail"
+                app:hide_text_color="#FF0000"
+                app:hide_text_size="6sp"
+                app:icon_button_color="#003366"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:magic_button_size="50dp" />
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" For any further queries ,provide us your details here:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.197" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below ="@id/t3">
+                <EditText
+                    android:id="@+id/name"
+                    android:textColorHint="@android:color/background_light"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:hint="Name"
+                    android:background="@drawable/edittextstyle"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@android:color/background_light"
+                    android:padding="15dp"
+                    android:layout_marginLeft="20dp"/>
+                <EditText
+                    android:id="@+id/contact"
+                    android:textColorHint="@android:color/background_light"
+                    android:layout_width="300dp"
+                    android:padding="15dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@android:color/background_light"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittextstyle"
+                    android:hint="Contact Number"
+                    />
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:textColorHint="@android:color/background_light"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@android:color/background_light"
+                    android:layout_marginLeft="20dp"
+                    android:padding="15dp"
+                    android:background="@drawable/edittextstyle"
+                    android:hint="Email"/>
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittextstyle"
+                    android:hint="Query"
+                    android:padding="15dp"
+                    android:maxLength="100"
+                    android:textColor="@android:color/background_light"
+                    android:textColorHint="@android:color/background_light" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <Button
+                        android:id="@+id/back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="BACK TO HOME"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/background_light"
+                        android:background="@drawable/roundedbutton"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        />
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="SUBMIT"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/background_light"
+                        android:background="@drawable/roundedbutton"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
